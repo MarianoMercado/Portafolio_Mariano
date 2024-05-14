@@ -1,0 +1,132 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 65px;
+}
+
+/*Header*/
+
+.overlay {
+  position: absolute;
+  top: 65px;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 1;
+
+  /*Efecto de Glassmorphismo*/
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  display: none;
+}
+
+.show-overlay {
+  display: block;
+}
+
+/*Hover de los elementos "a" del navbar*/
+.navbar-list li {
+  position: relative;
+  padding: 0;
+}
+
+.navbar-list li a::after {
+  content: "";
+  height: 2px;
+  width: 100%;
+  background: var(--fire);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.15s ease;
+}
+
+.navbar-list li a:hover::after {
+  transform-origin: bottom left;
+  transform: scaleX(1);
+}
+
+/*Hover de los elementos "a" del hero*/
+
+.hero-info a {
+  transition: all 0.2s ease-out;
+}
+
+.hero-info a:hover {
+  background-color: var(--fire);
+  transition: all 0.2s ease-in;
+}
+
+/* Animaciones */
+/**/
+
+/* Animacion fade */
+/*Funcionamiento: pasa de opacidad 0 a opacidad 1*/
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Animacion slide arriba */
+/*Funcionamiento: Hacemos llegar al elemento animado desde abajo*/
+@keyframes slide-up {
+  from {
+    transform: translateY(100px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Animacion slide derecha */
+/*Funcionamiento: Hacemos llegar al elemento animado desde la derecha*/
+
+@keyframes slide-right {
+  from {
+    transform: translateX(100px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Animacion al h1 */
+.hero-info-dev h1 {
+  /*animacion - duración - animation-function*/
+  animation: fade 1s ease-in, slide-right 1.3s ease-in-out;
+}
+.hero-info-dev h2 {
+  /*animacion - duración - animation-function*/
+  animation: fade 4s ease-in;
+}
+
+/* Animacion al p */
+.hero-links {
+  opacity: 0;
+  /*animacion - duración - animation-function - forwards para que quede fijo al final.*/
+  animation: fade 5s ease-in forwards;
+  /* animation-delay: 0.3s; */
+}
+
+/* Animacion al boton */
+.hero-info a {
+  opacity: 0;
+  /*animacion - duración - animation-function - forwards para que quede fijo al final.*/
+  animation: fade 5s ease-in forwards;
+  /* animation-delay: 0.4s; */
+}
+
+/* Animacion a la img del hero */
+.hero-img-container {
+  opacity: 0;
+  /*animacion - duración - animation-function - forwards para que quede fijo al final.*/
+  animation: fade 1s ease-in forwards, slide-right 1.3s ease-in-out;
+  animation-delay: 0.2s;
+}
