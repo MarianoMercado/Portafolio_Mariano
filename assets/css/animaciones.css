@@ -51,12 +51,14 @@ html {
 
 /*Hover de los elementos "a" del hero*/
 
-.hero-info a {
+.btn-more {
   transition: all 0.2s ease-out;
+  outline: 2px solid var(--white);
 }
 
-.hero-info a:hover {
-  background-color: var(--fire);
+.btn-more:hover {
+  background-color: var(--white);
+  color: var(--background);
   transition: all 0.2s ease-in;
 }
 

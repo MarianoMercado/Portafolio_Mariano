@@ -161,8 +161,10 @@ main {
 .hero-info {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  justify-content: center;
+  gap: 70px;
   width: 50%;
+  height: 80%;
 }
 .hero-info-dev {
   display: flex;
@@ -228,11 +230,11 @@ main {
   background-color: #463bd4;
   padding-right: 30px;
 } */
-.hero-info a {
+.btn-more {
   position: relative;
   display: inline-block;
-  color: var(--text-white);
-  background-color: var(--primary);
+  color: var(--white);
+  /* background-color: var(--white); */
   width: 120px;
   padding: 8px 0px;
   border-radius: 10px;
@@ -253,6 +255,7 @@ main {
   transform: translate(5px, -50%);
   opacity: 1;
   padding-right: 30px;
+  color: var(--back);
 }
 .hero-img-container {
   display: flex;
