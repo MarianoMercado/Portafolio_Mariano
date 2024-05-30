@@ -301,28 +301,19 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
-  /* background-image: url(../img/bg-code.jpg); */
-
+  padding: 40px 0;
   background: linear-gradient(to top, var(--white-ligth), var(--white-ligth));
-  background-size: cover;
-  background-position: center;
-  /* position: relative; */
+  max-width: 1200px;
   width: 100%;
   gap: 20px;
 }
-#about::before {
-  content: "";
-  position: absolute;
-
-  width: 100%;
-  height: 100vh;
-}
 
 #about h2 {
-  background: var(--back);
+  color: var(--white);
+  font-weight: 700;
+  /*background: var(--back);
   padding: 5px 10px;
-  border-radius: 14px;
+  border-radius: 14px;*/
 }
 
 .container-about {
@@ -338,30 +329,26 @@ main {
   justify-content: space-between;
   flex-direction: column;
   align-items: center;
-  background: var(--bg-black);
-  gap: 20px;
+  background: var(--background);
+  gap: 10px;
   border-radius: 16px;
   padding: 10px;
-  max-width: 300px;
+  max-width: 200px;
   height: 300px;
+  box-shadow: 0 7px 20px 5px var(--background);
 }
 .about-card img {
   height: 50px;
   width: 50px;
-  color: white;
-}
-.about-card-info-conteiner {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  font-size: 10px;
-  color: gray;
+  color: var(--bg-white);
 }
 .about-card-info {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
   align-items: center;
-  width: 100%;
+  font-size: 10px;
+
+  padding: 10px 5px;
 }
