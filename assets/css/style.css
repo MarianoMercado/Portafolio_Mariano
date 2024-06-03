@@ -352,3 +352,98 @@ main {
 
   padding: 10px 5px;
 }
+
+/******************* projects ************************/
+#projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px 0;
+
+  max-width: 1200px;
+  width: 100%;
+  gap: 50px;
+}
+
+#projects h2 {
+  color: var(--white);
+  font-weight: 700;
+  /* -webkit-box-reflect: below 10px
+    linear-gradient(to bottom, var(--white-ligth), var(--white-ligth)); */
+}
+#projects h2:active {
+  scale: 0.92;
+}
+
+.projects-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.projects-card {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background: var(--white);
+  background: linear-gradient(to top, var(--white), var(--gray));
+  gap: 5px;
+  border-radius: 16px;
+  padding: 10px;
+  max-width: 200px;
+
+  box-shadow: 0 7px 20px 5px var(--gray);
+  box-shadow: 15px 15px 30px rgb(25, 25, 25), -15px -15px 30px rgb(60, 60, 60);
+  color: var(--background);
+}
+.projects-card img {
+  height: 100px;
+  width: 100%;
+  border-radius: 16px;
+  border: 1px solid var(--bg-black-ligth);
+}
+.projects-card-description {
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  border-bottom: solid 1px var(--gray);
+  padding: 5px 0;
+}
+.projects-card-description strong {
+  font-size: 14px;
+}
+.projects-card-description span {
+  font-size: 10px;
+  color: var(--gray);
+}
+.projects-card-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+  padding: 5px;
+  border-radius: 16px;
+}
+.projects-card-info a {
+  color: var(--background);
+  width: 100px;
+  padding: 8px 0px;
+  border-radius: 10px;
+  font-size: 14px;
+  text-align: center;
+  border: 1px solid var(--bg-black-ligth);
+  transition: 0.3s;
+}
+
+.projects-card-info i:hover,
+.projects-card-info a:hover {
+  list-style: none;
+  background: var(--background);
+  color: var(--white);
+  box-shadow: 0 5px 10px 1px var(--gray);
+  transform: scale(0.9);
+}

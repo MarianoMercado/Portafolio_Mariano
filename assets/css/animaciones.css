@@ -16,7 +16,7 @@ html {
   /*Efecto de Glassmorphismo*/
   background: rgba(255, 255, 255, 0.05);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(5px);
   display: none;
 }
@@ -166,5 +166,53 @@ html {
   }
   to {
     transform: translateX(0);
+  }
+}
+
+/* efecto refelejo */
+
+.shine {
+  font-size: 2em;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.3);
+  background: #222
+    --webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(#222),
+      to(#222),
+      color-stop(0.5, #fff)
+    )
+    0 0 no-repeat;
+  background-image: -webkit-linear-gradient(
+    -40deg,
+    transparent 0%,
+    transparent 40%,
+    #fff 50%,
+    transparent 60%,
+    transparent 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-size: 50px;
+  -webkit-background-size: 50px;
+  animation: zezzz;
+  -webkit-animation: zezzz;
+  animation-duration: 5s;
+  -webkit-animation-duration: 5s;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+}
+@keyframes zezzz {
+  0%,
+  10% {
+    background-position: -200px;
+  }
+  20% {
+    background-position: top left;
+  }
+  100% {
+    background-position: 200px;
   }
 }
