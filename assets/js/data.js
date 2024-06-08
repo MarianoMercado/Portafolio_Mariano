@@ -46,6 +46,6 @@ const projectsData = [
     img: "assets/img/projects/car.jpg",
     category: "JS",
     gitHub: "https://github.com/MarianoMercado/IntegradorJs",
-    sitio: "https://integrador-d2kkih96k-marianomercado.vercel.app/",
+    sitio: "",
   },
 ];

@@ -134,7 +134,7 @@ header {
   transform-origin: left;
   transform: scaleX(0);
   transition: 0.3s;
-  background-color: var(--fire);
+  background-color: var(--primary);
 }
 .navbar-link:hover::after {
   transform: scaleX(1);
@@ -303,6 +303,7 @@ main {
   flex-direction: column;
   padding: 40px 0;
   background: linear-gradient(to top, var(--white-ligth), var(--white-ligth));
+  background: var(--nav-bg);
   max-width: 1200px;
   width: 100%;
   gap: 20px;
@@ -335,7 +336,8 @@ main {
   padding: 10px;
   max-width: 200px;
   height: 300px;
-  box-shadow: 0 7px 20px 5px var(--background);
+  /* box-shadow: 0 7px 20px 5px var(--white); */
+  border: 1px solid var(--white);
 }
 .about-card img {
   height: 50px;
@@ -349,7 +351,6 @@ main {
   gap: 5px;
   align-items: center;
   font-size: 10px;
-
   padding: 10px 5px;
 }
 
@@ -446,4 +447,42 @@ main {
   color: var(--white);
   box-shadow: 0 5px 10px 1px var(--gray);
   transform: scale(0.9);
+}
+/******************* contact ************************/
+#contact {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px 0;
+  background: var(--nav-bg);
+  max-width: 1200px;
+  width: 100%;
+  gap: 50px;
+}
+#projects h2 {
+  color: var(--white);
+  font-weight: 700;
+}
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  gap: 20px;
+}
+.social {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.social a {
+  color: var(--white);
+  width: 100px;
+  padding: 8px 0px;
+  border-radius: 10px;
+  font-size: 14px;
+  text-align: center;
+  transition: 0.3s;
 }

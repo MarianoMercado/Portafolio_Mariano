@@ -29,6 +29,13 @@ const toggleMenu = () => {
 const createProjetsCard = (projet) => {
   const { id, title, description, img, category, gitHub, sitio } = projet;
 
+  let sitioLink = "";
+  if (sitio) {
+    sitioLink = `<a href="${sitio}" target="_blank">
+                      Sitio <i class="fa-solid fa-globe"></i>
+                </a>`;
+  }
+
   return `   
           <div class="projects-card">
             <img src="${img}" alt="${(title, category)}" >
@@ -40,9 +47,7 @@ const createProjetsCard = (projet) => {
                 <a href="${gitHub}" target="_blank">
                    github <i class="fa-brands fa-github"></i>
                 </a>
-                 <a href="${sitio}" target="_blank">
-                  Sitio <i class="fa-solid fa-globe"></i>
-                </a> 
+                ${sitioLink}
               </div>
           </div>       
 `;

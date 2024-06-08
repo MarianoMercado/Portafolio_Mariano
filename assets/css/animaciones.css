@@ -35,7 +35,7 @@ html {
   content: "";
   height: 2px;
   width: 100%;
-  background: var(--fire);
+  background: var(--primary);
   position: absolute;
   bottom: 0;
   left: 0;
@@ -113,7 +113,7 @@ html {
 .about-card::before {
   position: fixed;
   content: "";
-  box-shadow: 0 0 100px 40px var(--primary);
+  box-shadow: 0 0 100px 40px var(--white);
   top: -10%;
   left: -100%;
   transform: rotate(-45deg);
@@ -127,10 +127,29 @@ html {
 }
 
 .about-card:hover {
-  border: 1px solid var(--primary);
-  box-shadow: 0 7px 50px 10px var(--white);
+  border: 1px solid var(--white);
+  box-shadow: 5px 5px 15px 10px var(--background);
   transform: scale(1.015);
   transition: all 0.7s ease;
+}
+
+/*******************contact************************/
+
+.social_email:hover {
+  background-color: var(--fire);
+  animation: bounce_613 0.4s linear;
+}
+.social_Linkedin:hover {
+  background-color: var(--primary);
+  animation: bounce_613 0.4s linear;
+}
+.social_github:hover {
+  background-color: var(--background);
+  animation: bounce_613 0.4s linear;
+}
+.social_CV:hover {
+  background-color: var(--secondary);
+  animation: bounce_613 0.4s linear;
 }
 
 /******************* @keyframes ************************/
@@ -214,5 +233,24 @@ html {
   }
   100% {
     background-position: 200px;
+  }
+}
+
+/* efecto de salto */
+@keyframes bounce_613 {
+  40% {
+    transform: scale(1);
+  }
+
+  60% {
+    transform: scale(0.8);
+  }
+
+  80% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
   }
 }
